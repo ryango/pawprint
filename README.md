@@ -14,7 +14,29 @@ View your app in AI Studio: https://ai.studio/apps/drive/1gZILXyeIPD32_Vo74zdYu3
 
 
 1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
+   ```bash
+   npm install
+   ```
+
+2. Set up environment variables:
+   - Copy `.env.example` to `.env.local`
+   - Set `GEMINI_API_KEY` to your Gemini API key
+   - Set `VITE_STRIPE_PUBLISHABLE_KEY` to your Stripe publishable key (get it from [Stripe Dashboard](https://dashboard.stripe.com/apikeys))
+
 3. Run the app:
-   `npm run dev`
+   ```bash
+   npm run dev
+   ```
+
+## Features
+
+- **AI Image Generation**: Upload a pet photo and get 4 funny AI-generated variations
+- **Stripe Payment Integration**: Users can purchase and download generated images for $4.99
+- **Responsive Design**: Works seamlessly on desktop and mobile devices
+
+## Payment Flow
+
+1. User uploads a pet image
+2. AI generates 4 funny variations
+3. Payment modal appears with Stripe checkout
+4. After successful payment, users can download all images
